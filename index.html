@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8ecfee4750.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="contenedor-principal">
+        <div id="contenedor-cabecera" class="cabecera-cv">
+            <div class="cabecera-cv_contacto">
+                <p class="cv-contacto_nombre">Virginia Lara</p>
+                <ul>
+                    <li class="cv-contacto_red"><a href="https://mail.google.com/" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+                    <li class="cv-contacto_red"><a href="https://www.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li class="cv-contacto_red"><a href="https://www.linkedin.com/feed/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="contenedor-navegador" class="navegador-cv">
+            <div class="navegador-cv_bars">
+                <button id="cv-bars_boton"><i class="fa-solid fa-bars"></i></button>
+                <div id="cv-bars_lista">
+                    <ul class="lista-opciones">
+                        <li class="opciones-item"><a href="#" id="identificaddor-inicio">Inicio</a></li>
+                        <li class="opciones-item"><a href="#" id="identificaddor-postulante">Información Personal</a></li>
+                        <li class="opciones-item"><a href="#" id="identificaddor-habilidades">Habilidades</a></li>
+                        <li class="opciones-item"><a href="#" id="identificaddor-experiencia">Experiencia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="navegador-cv_botones" >
+                <ul>
+                    <li class="cv-botones_item"><button id="boton-inicio"><i class="fa-solid fa-house"></i></button></li>
+                    <li class="cv-botones_item"><button id="boton-postulante"><i class="fa-regular fa-user"></i></button></li>
+                    <li class="cv-botones_item"><button id="boton-habilidad"><i class="fa-solid fa-sliders"></i></button></li>
+                    <li class="cv-botones_item"><button id="boton-experiencia"><i class="fa-solid fa-timeline"></i></button></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="contenedor-informacion">
+            <div id="informar-texto" class="contenedor-general">
+                <h3 class="contenedor-general_titulo"><i class="fa-solid fa-caret-right"></i>Acerca de mí...</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, voluptatibus culpa excepturi ad placeat corporis vero nulla sit saepe asperiores qui laboriosam soluta hic unde distinctio ab cumque at consequatur.
+                    Enim at placeat nostrum vero aliquid iusto voluptas, ab ex consectetur laboriosam praesentium labore tempora optio! Assumenda veritatis provident quo! Laboriosam commodi aliquam soluta voluptatem deserunt laudantium quis, facere aut.
+                    Accusamus consequatur laudantium ea alias. Voluptatem perspiciatis culpa sequi quo, itaque libero possimus cupiditate saepe in cumque dolores iusto quisquam, voluptates facilis nostrum veniam rerum excepturi beatae nisi optio magni.
+                </p>
+            </div>
+
+            <div id="informar-datos" class="contenedor-general">
+                <h3 class="contenedor-general_titulo"><i class="fa-solid fa-caret-right"></i>Información Personal</h3>
+                <section>
+                    <div class="informacion-personal nombreCompleto">
+                        <h4><i class="fa-solid fa-user"></i>Nombre y Apellido</h4>
+                        <p class="derecho-informar_parrafo">Virginia Lara</p>
+                    </div>
+                    <div class="informacion-personal fecha">
+                        <h4><i class="fa-solid fa-calendar"></i>Fecha de Nacimiento:</h4>
+                        <p class="derecho-informar_parrafo">dd de noviembre de aaaa</p>
+                    </div>
+                    <div class="informacion-personal nacionalidad">
+                        <h4><i class="fa-solid fa-earth-americas"></i></i>Nacionalidad:</h4>
+                        <p class="derecho-informar_parrafo">Argentina</p>
+                    </div>
+                    <div class="informacion-personal edad">
+                        <h4><i class="fa-solid fa-cake-candles"></i>Edad:</h4>
+                        <p class="derecho-informar_parrafo">xx años</p>
+                    </div>
+                    <div class="informacion-personal direccion">
+                        <h4><i class="fa-solid fa-location-dot"></i>Dirección:</h4>
+                        <p class="derecho-informar_parrafo">Dirección Postulante N°123</p>
+                    </div>
+                    <div class="informacion-personal dni">
+                        <h4><i class="fa-solid fa-address-book"></i>DNI:</h4>
+                        <p class="derecho-informar_parrafo">xx.xxx.xxx</p>
+                    </div>
+                </section>
+                <div class="derecho-informar_boton">
+                    <button id="mostrar_formulario">Dejame un mensaje</button>
+                </div>
+                <div id="formulario_contacto" class="contenedor-formulario">
+                    <div class="formulario-cerrar">
+                        <button id="cerrar-boton"><i class="fa-solid fa-x"></i></button>
+                    </div>
+                    <div class="formulario">
+                        <p class="leyenda">*Envíame un mensaje para poder contáctarme cóntigo.</p>
+                        <form action="">
+                            <label for="nombre" class="indicador">
+                                <p>Nombre</p>
+                                <input type="text" id="nombre" name="nombre" required="name" placeholder="Ingrese su nombre">
+                            </label>
+                            <label for="correo" class="indicador">
+                                <p>Corréo</p>
+                                <input type="email" id="correo" name="correo" required="email" placeholder="correo@email.com">
+                            </label>
+                            <label for="asunto" class="indicador">
+                                <p>Asúnto</p>
+                                <input type="text" id="asunto" name="asunto" required="text" placeholder="Ingrese asunto">
+                            </label>
+                            <label for="mensaje" class="indicador">
+                                <p>Mensáje</p>
+                                <textarea name="mensaje" id="mensaje" cols="29" rows="8" required></textarea>
+                            </label>
+                            <div class="enviar-boton">
+                                <input type="submit" value="Enviar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="informar-habilidades" class="contenedor-general">
+                <h3 class="contenedor-general_titulo"><i class="fa-solid fa-caret-right"></i>Habilidades</h3>
+                <ul class="contenedor-habilidades">
+                    <li class="contenedor-habilidades_item">
+                        <p><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil..</p>
+                        <div class="habilidades-item_barra">
+                            <div class="barra-relleno_uno"></div>
+                        </div>
+                    </li>
+                    <li class="contenedor-habilidades_item">
+                        <p><i class="fa-solid fa-check"></i> Lorem ipsum dolor consectetur adipisicing.</p>
+                        <div class="habilidades-item_barra">
+                            <div class="barra-relleno_dos"></div>
+                        </div>
+                    </li>
+                    <li class="contenedor-habilidades_item">
+                        <p><i class="fa-solid fa-check"></i> Lorem ipsum dolor consectetur adipisicing.</p>
+                        <div class="habilidades-item_barra">
+                            <div class="barra-relleno_tres"></div>
+                        </div>
+                    </li>
+                    <li class="contenedor-habilidades_item">
+                        <p><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="habilidades-item_barra">
+                            <div class="barra-relleno_cuatro"></div>
+                        </div>
+                    </li>
+                    <li class="contenedor-habilidades_item">
+                        <p><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil.</p>
+                        <div class="habilidades-item_barra">
+                            <div class="barra-relleno_cinco"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="informar-experiencia" class="contenedor-general">
+                <h3 class="contenedor-general_titulo"><i class="fa-solid fa-caret-right"></i>Experiencia</h3>
+                <div class="contenedor-general_experiencia">
+                    <div class="seleccionar-anio">
+                        <div><button id="decada-uno">2000 - 2010</button></div>
+                        <div><button id="decada-dos">2011 - 2020</button></div>
+                        <div><button id="decada-tres">2021 - ...</button></div>
+                    </div>
+                    <div id="mostrar-experiencia">
+                        <div id="mostrar-experiencia_decadaUno">
+                            <div class="mostrar-empleo">
+                                <div class="mostrar-empleo_anio">
+                                    <span>20XX - 20XX</span>
+                                </div>
+                                <div class="mostrar-empleo_lugarPuestoDescripcion">
+                                    <h5>Empresa - Puesto que ocupó</h5>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum nisi doloremque inventore sed repellendus recusandae vero deleniti nesciunt consequatur sit.</p>
+                                </div>
+                            </div>
+
+                            <div class="mostrar-empleo">
+                                <div class="mostrar-empleo_anio">
+                                    <span>20XX - 20XX</span>
+                                </div>
+                                <div class="mostrar-empleo_lugarPuestoDescripcion">
+                                    <h5>Empresa - Puesto que ocupó</h5>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum nisi doloremque inventore sed repellendus recusandae vero deleniti nesciunt consequatur sit.?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="mostrar-experiencia_decadaDos">
+                            <div class="mostrar-empleo">
+                                <div class="mostrar-empleo_anio">
+                                    <span>20XX - 20XX</span>
+                                </div>
+                                <div class="mostrar-empleo_lugarPuestoDescripcion">
+                                    <h5>Empresa - Puesto que ocupó</h5>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum nisi doloremque inventore sed repellendus recusandae vero deleniti nesciunt consequatur sit.?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="mostrar-experiencia_decadaTres">
+                            <div class="mostrar-empleo">
+                                <div class="mostrar-empleo_anio">
+                                    <span>20XX - 20XX</span>
+                                </div>
+                                <div class="mostrar-empleo_lugarPuestoDescripcion">
+                                    <h5>Empresa - Puesto que ocupó</h5>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum nisi doloremque inventore sed repellendus recusandae vero deleniti nesciunt consequatur sit.?</p>
+                                </div>
+                            </div>
+
+                            <div class="mostrar-empleo">
+                                <div class="mostrar-empleo_anio">
+                                    <span>20XX - 20XX</span>
+                                </div>
+                                <div class="mostrar-empleo_lugarPuestoDescripcion">
+                                    <h5>Empresa - Puesto que ocupó</h5>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum nisi doloremque inventore sed repellendus recusandae vero deleniti nesciunt consequatur sit.?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="./jsIndex.js"></script>
+</body>
+</html>
