@@ -65,14 +65,18 @@ const cambiarDisplayAnio = (exibir, bloquear1, bloquear2, mostrar) => {
     bloquear2.style.display = 'none';
 }
 
+//obteniendo boton por anio de experiencia
 const btnAnioUno = document.getElementById('decada-uno');
 const btnAnioDos = document.getElementById('decada-dos');
 const btnAnioTres = document.getElementById('decada-tres');
 
+//obteniendo fichas de informacion por anio de experiencia
 const fichaAnioUno = document.getElementById('mostrar-experiencia_decadaUno');
 const fichaAnioDos = document.getElementById('mostrar-experiencia_decadaDos');
 const fichaAnioTres = document.getElementById('mostrar-experiencia_decadaTres');
 
+//llamando a la funcion que cambia el display a las fichas por anio de experiencia
+fichaAnioUno.style.display = 'grid';
 btnAnioUno.addEventListener('click', () => cambiarDisplayAnio(fichaAnioUno, fichaAnioDos, fichaAnioTres, 'grid'));
 btnAnioDos.addEventListener('click', () => cambiarDisplayAnio(fichaAnioDos, fichaAnioUno, fichaAnioTres, 'grid'));
 btnAnioTres.addEventListener('click', () => cambiarDisplayAnio(fichaAnioTres, fichaAnioUno, fichaAnioDos, 'grid'));
@@ -91,7 +95,7 @@ btnHabilidades.addEventListener('click', () => cambiarDisplay(fichaHabilidad, fi
 btnExperiencia.addEventListener('click', () => cambiarDisplay(fichaExperiencia, fichaTexto, fichaDatos, fichaHabilidad, 'grid'));
 
 
-const mantenerColor = (btn, color1, color2) => {
+/*const mantenerColor = (btn, color1, color2) => {
         window.addEventListener('click', (e) => {
             if(btn.contains(e.target)) {
                 btn.style.color = color1;
@@ -101,24 +105,40 @@ const mantenerColor = (btn, color1, color2) => {
                 }
             }
         })
+}*/
+const mantenerColor = (btn, color1, color2) => {
+    window.addEventListener('click', (e) => {
+        console.log(e);
+        if(btn.contains(e.target)) {
+            btn.style.color = color1;
+        } else {
+            if(!btn.contains(e.target)){
+                btn.style.color = color2;
+            }
+        }
+    })
 }
-btnInicio.addEventListener('click', () => mantenerColor(btnInicio, '#E5989B', '#202030'));
-btnPostulante.addEventListener('click', () => mantenerColor(btnPostulante, '#E5989B', '#202030'));
-btnHabilidades.addEventListener('click', () => mantenerColor(btnHabilidades, '#E5989B', '#202030'));
-btnExperiencia.addEventListener('click', () => mantenerColor(btnExperiencia, '#E5989B', '#202030'));
+
+btnInicio.addEventListener('click', () => mantenerColor(btnInicio, '#FF3366', '#011627'));
+btnPostulante.addEventListener('click', () => mantenerColor(btnPostulante, '#FF3366', '#011627'));
+btnHabilidades.addEventListener('click', () => mantenerColor(btnHabilidades, '#FF3366', '#011627'));
+btnExperiencia.addEventListener('click', () => mantenerColor(btnExperiencia, '#FF3366', '#011627'));
 
 
 const colorFondo = (btn, color1, color2) => {
     window.addEventListener('click', (e) => {
         if(btn.contains(e.target)) {
             btn.style.background = color1;
+            btn.style.color = '#011627';
         } else {
             if(!btn.contains(e.target)) {
                 btn.style.background = color2;
+                btn.style.color = '#F6F7F8';
             }
         }
     })
 }
-btnAnioUno.addEventListener('click', () => colorFondo(btnAnioUno, '#34D1BF', '#202030'));
-btnAnioDos.addEventListener('click', () => colorFondo(btnAnioDos, '#34D1BF', '#202030'));
-btnAnioTres.addEventListener('click', () => colorFondo(btnAnioTres, '#34D1BF', '#202030'));
+
+btnAnioUno.addEventListener('click', () => colorFondo(btnAnioUno, '#F6F7F8', '#011627'));
+btnAnioDos.addEventListener('click', () => colorFondo(btnAnioDos, '#F6F7F8', '#011627'));
+btnAnioTres.addEventListener('click', () => colorFondo(btnAnioTres, '#F6F7F8', '#011627'));

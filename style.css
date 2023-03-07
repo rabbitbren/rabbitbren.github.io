@@ -5,7 +5,8 @@
 }
 
 body {
-    background: linear-gradient(#000000 50%, #39304A);
+    /* background: linear-gradient(#000000 50%, #39304A); */
+    background: linear-gradient(#000000 50%, #011627);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -56,7 +57,7 @@ body {
     /* background: darkgreen; */
     width: 100%;
     height: 50%;
-    color: #F8F4E3;
+    color: #F6F7F8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,13 +91,12 @@ body {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #F8F4E3;
+    color: #F6F7F8;
     transition: background-color 2s, border-radius 800ms;
 }
 .cv-contacto_red a:hover {
     cursor: pointer;
-    background: #34D1BF;
-    border-radius: 30%;
+    color: #2EC4B6;
     animation: rotar 1 1s linear;
 }
 @keyframes rotar {
@@ -118,7 +118,7 @@ body {
 }
 
 .navegador-cv_bars {
-    background: #F8F4E3;
+    /* background: #F8F4E3; */
     width: 90%;
     height: 100%;
     display: flex;
@@ -127,7 +127,8 @@ body {
 }
 /*BOTONES DE NAVEGACION EN UN LAYOUT MAYOR 992PX*/
 .navegador-cv_botones {
-    background: #f8f4e3ef;
+    /* background: #f8f4e3ef; */
+    background: #f6f7f8ed;
     width: 100%;
     height: 100%;
     display: none; /*cambiar a flex cuando aumente el layout*/
@@ -152,12 +153,11 @@ body {
 .navegador-cv_botones ul button {
     background: none;
     border: none;
-    color: #39304A;
+    color: #011627;
     font-size: 1em;
 }
 .navegador-cv_botones ul button:hover {
     cursor: pointer;
-    color: #E5989B;
     animation: sacudir 3 200ms linear;
 }
 @keyframes sacudir {
@@ -179,12 +179,13 @@ body {
     align-items: center;
 }
 .fa-bars {
-    color: #E5989B;
+    color: #FF3366;
     font-size: 1.4em;
 }
+
 /*-------> contenedor del menu desplegables  del CV<-------*/
 #cv-bars_lista {
-    background: #F8F4E3;
+    background: #F6F7F8;
     width: 72%;
     height: 52.2%;
     position: absolute;
@@ -195,7 +196,6 @@ body {
     justify-content: center;
 }
 .lista-opciones {
-    /* background: darkorange; */
     width: 80%;
     height: 100%;
     list-style: none;
@@ -206,7 +206,6 @@ body {
 
 }
 .opciones-item {
-    /* background: darksalmon; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -214,14 +213,13 @@ body {
     align-items: center;
 }
 .opciones-item a {
-    /* background: darkgreen; */
     width: 100%;
     height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #202030;
+    color: #011627;
     font-family: 'Poppins', sans-serif;
     font-size: 0.9em;
     font-weight: 300;
@@ -231,19 +229,17 @@ body {
 
 /*-------> CONTENEDOR GENERAL DE LA INFORMACION ACERCA DEL POSTULANTE <-------*/
 #contenedor-informacion {
-    background: #F8F4E3;
+    background: #F6F7F8;
     width: 90%;
     height: 100%;
     display: flex;
     justify-self: center;
     justify-content: center;
     align-items: center;
-    /* padding: 0.4em 0; */
 }
 
 /*caracteristicas generales aplicadas  al contenedor de la informacion*/
 .contenedor-general {
-    /* background: darksalmon; */
     width: 96%;
     height: 96%;
     animation: deslizarFicha 1 500ms linear;
@@ -251,9 +247,8 @@ body {
 
 /*estilos aplicado al titulo de cada ficha de informacion*/
 .contenedor-general_titulo {
-    /* background: #1b1b51; */
     height: 100%;
-    color: #202030;
+    color: #011627;
     display: flex;
     align-items: center;
     font-size: 1.4em;
@@ -266,7 +261,7 @@ body {
     font-size: 1em;
     display: flex;
     align-items: center;
-    color: #34D1BF;
+    color: #2EC4B6;
 }
 
 
@@ -276,8 +271,7 @@ body {
     grid-template-rows: 20% 80%;
 }
 #informar-texto p {
-    /* background: darkmagenta; */
-    color: #39304A;
+    color: #011627;
     font-family: 'PT Sans', sans-serif;
     font-size: 0.9em;
     font-weight: 100;
@@ -292,7 +286,6 @@ body {
 }
 /*seccion contenedora de cada dato, dispuesto en dos columna y tres filas diferentes*/
 #informar-datos section {
-    /* background: darkmagenta; */
     width: 100%;
     height: 100%;
     display: grid;
@@ -303,8 +296,6 @@ body {
     padding: 0.8em 0;
 }
 .informacion-personal {
-    background: #e5989b4a;
-    /* background: #39304A; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,18 +306,16 @@ body {
     font-size: 0.9em;
 }
 .informacion-personal h4 {
-    color: #202030;
-    /* color: #F8F4E3; */
+    color: #011627;
     font-family: 'PT Sans', sans-serif;
     font-weight: 100;
     font-size: 1em;
 }
 .informacion-personal h4 .fa-solid {
-    color: #F8F4E3;
+    color: #FF3366;
 }
 .informacion-personal p {
-    color: #39304A;
-    /* color: #F8F4E3; */
+    color: #011627;
     display: flex;
     padding-left: 1.4em;
     font-size: 0.8em;
@@ -336,27 +325,24 @@ body {
 
 /*contenedor inferior de la ficha de datos, que dispone del boton para acceder al formulario de contacto*/
 .derecho-informar_boton {
-    /* background: darkgoldenrod; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 /* boton que muestra el formulario */
 #mostrar_formulario {
-    background: #39304A;
+    background: #011627;
     width: 100%;
     height: 100%;
-    color: #F8F4E3;
+    color: #F6F7F8;
     border: none;
-    /* border: solid #a7a7a7 0.1em; */
 }
 #mostrar_formulario:hover {
     cursor: pointer;
 }
 /*FORMULARIO DE CONTACTO*/
 #formulario_contacto {
-    /* background: #39304a86; */
-    background: #202030f1;
+    background: #011627f1;
     position: absolute;
     top: 0;
     right: 0;
@@ -368,7 +354,6 @@ body {
     grid-template-columns: 100%;
 }
 .formulario-cerrar {
-    /* background: darkmagenta; */
     width: 10%;
     height: 100%;
     display: flex;
@@ -388,7 +373,7 @@ body {
 }
 /*CAJA DEL FORMULARIO QUE CONTIENE LOS CAMPOS DE INGRESO DE DATOS PARA CONTACTAR*/
 .formulario {
-    background: #202030;
+    background: #011627;
     width: 50%;
     height: 90%;
     display: grid;
@@ -398,39 +383,38 @@ body {
     padding: 1em;
 }
 .formulario .leyenda {
-    /* background: darkcyan; */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #F8F4E3;
+    color: #F6F7F8;
     font-family: 'PT Sans', sans-serif;
     font-size: 0.9em;
     font-weight: 100;
 }
 .formulario form {
-    background: #202030;
+    background: #011627;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 .indicador p{
-    color: #F8F4E3;
+    color: #587291;
     font-family: 'PT Sans', sans-serif;
     font-size: 0.9em;
     font-weight: 100;
-    border-bottom: #39304A solid 0.04em;
+    border-bottom: #587291 solid 0.04em;
     padding-bottom: 0.2em;
 }
 /* remueve el color del fondo al autocompletar y cambia el color de la fuente, que vienen definidos por la web */
 .indicador input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #202030 inset;
+    -webkit-box-shadow: 0 0 0px 1000px #011627 inset;
 }
 
 .indicador input:-webkit-autofill {
-    -webkit-text-fill-color: #E5989B;
+    -webkit-text-fill-color: #F6F7F8;
 }
 .indicador input {
-    width: 60%;
+    width: 100%;
     height: 60%;
     padding: 0.2em;
     background: none;
@@ -438,16 +422,16 @@ body {
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
     font-weight: 100;
-    color: #E5989B;
+    color: #F6F7F8;
 }
 .indicador textarea {
     background: none;
     border: none;
-    color: #F8F4E3;
+    color: #f6f7f8;
     width: 100%;
 }
 .enviar-boton {
-    background: #34D1BF;
+    background: #FF3366;
     width: 100%;
     height: 8%;
 }
@@ -456,7 +440,7 @@ body {
     height: 100%;
     background: none;
     border: none;
-    color: #F8F4E3;
+    color: #F6F7F8;
     font-family: 'PT Sans', sans-serif;
     transition: font-size 600ms;
 }
@@ -467,13 +451,11 @@ body {
 
 /*-------> TERCERA FICHA DE INFORMACION DE HABILIDADES DEL POSTULANTE <-------*/
 #informar-habilidades {
-    /* background: darkorange; */
     display: none; /*cambiar a grid despues*/
     grid-template-rows: 15% 85%;
     grid-template-columns: 100%;
 }
 .contenedor-habilidades {
-    /* background: darkred; */
     width: 100%;
     height: 100%;
     display: grid;
@@ -482,7 +464,6 @@ body {
     justify-content: space-evenly;
 }
 .contenedor-habilidades_item {
-    background: #e5989b4a;
     width: 100%;
     height: 85%;
     display: grid;
@@ -492,51 +473,50 @@ body {
     padding: 0.4em;
 }
 .contenedor-habilidades_item p {
-    /* background: darkgreen; */
     width: 100%;
     height: 100%;
     font-family: 'PT Sans', sans-serif;
     font-size: 0.82em;
-    color: #39304A;
+    color: #011627;
 }
 
 .fa-check {
-    color: #39304A;
+    color: #FF3366;
     font-weight: 600;
 }
 .habilidades-item_barra {
     width: 90%;
     height: 100%;
-    /* border: #39304A solid 0.04em; */
     display: flex;
     justify-self: center;
  }
  .barra-relleno_uno {
-    background: #F8F4E3;
+    background: #587291;
     width: 90%;
     height: 100%;
     animation: rellenar 1 5s linear;
  }
  .barra-relleno_dos {
-    background: #F8F4E3;
+    background: #587291;
     width: 70%;
     height: 100%;
     animation: rellenar 1 5s linear;
  }
  .barra-relleno_tres {
-    background: #F8F4E3;
+    background: #587291;
     width: 82%;
     height: 100%;
     animation: rellenar 1 5s linear;
  }
  .barra-relleno_cuatro {
-    background: #F8F4E3;
+
+    background: #587291;
     width: 85%;
     height: 100%;
     animation: rellenar 1 5s linear;
  }
  .barra-relleno_cinco {
-    background: #F8F4E3;
+    background: #587291;
     width: 60%;
     height: 100%;
     animation: rellenar 1 3s linear;
@@ -545,19 +525,16 @@ body {
 
 /*-------> CUARTA FICHA QUE CONTIENE LOS DATOS DE EXPERIENCIA LABORAL DEL POSTULANTE <-------*/
 #informar-experiencia {
-    /* background: darkorchid; */
     display: none; /*cambiar a Grid*/
     grid-template-rows: 15% 85%;
     grid-template-columns: 100%;
 }
 
 .contenedor-general_experiencia {
-    /* background: darkgreen; */
     display: grid;
     grid-template-rows: 10% 90%;
 }
 .seleccionar-anio {
-    /* background: darkblue; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -565,7 +542,7 @@ body {
     align-items: center;
 }
 .seleccionar-anio div {
-    background: #202030;
+    background: #011627;
     width: 30%;
     height: 75%;
     display: flex;
@@ -578,13 +555,12 @@ body {
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 0.8em;
-    color: #F8F4E3;
+    color: #F6F7F8;
 }
 .seleccionar-anio div button:hover {
     cursor: pointer;
 }
 #mostrar-experiencia_decadaUno, #mostrar-experiencia_decadaDos, #mostrar-experiencia_decadaTres {
-    /* background: darkgoldenrod; */
     width: 100%;
     height: 100%;
     display: none; /*cambiar a Grid*/
@@ -596,16 +572,14 @@ body {
 }
 
 .mostrar-empleo {
-    /* background: #e5989b30; */
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 100%;
 }
 .mostrar-empleo_anio {
-    background: #e5989b4a;
+    background: #FF3366;
     width: 100%;
     height: 100%;
-    /* border-left: #202030 solid 0.1em; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -613,12 +587,11 @@ body {
 .mostrar-empleo_anio span {
     font-size: 0.8em;
     font-family: 'PT Sans', sans-serif;
-    color: #F8F4E3;
+    color: #F6F7F8;
     font-weight: 600;
 }
 
 .mostrar-empleo_lugarPuestoDescripcion {
-    /* background: darkcyan; */
     width: 100%;
     height: 100%;
     display: grid;
@@ -627,17 +600,15 @@ body {
     padding: 0.3em;
 }
 .mostrar-empleo_lugarPuestoDescripcion h5 {
-    /* background: darkred; */
     font-family: 'PT Sans', sans-serif;
     font-size: 0.9em;
     font-weight: 600;
-    color: #202030;
+    color: #011627;
 }
 .mostrar-empleo_lugarPuestoDescripcion p {
-    /* background: darkgreen; */
     font-family: 'PT Sans', sans-serif;
     font-size: 0.8em;
-    color: #39304A;
+    color: #011627;
 }
 
 
@@ -667,12 +638,12 @@ body {
     0% {
         width: 0%;
         opacity: 0.2;
-        background: #E5989B;
+        background: #587291f1;
     }
     50% {
         width: 100%;
         opacity: 0.6;
-        background: #E5989B;
+        background: #587291;
     }
 }
 
