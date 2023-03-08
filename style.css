@@ -157,6 +157,9 @@ body {
     cursor: pointer;
     animation: sacudir 3 200ms linear;
 }
+.navegador-cv_botones ul button i {
+    pointer-events: none;
+}
 @keyframes sacudir {
     0% {
         transform: translateX(-2px);
@@ -364,7 +367,7 @@ body {
     border: none;
 }
 .fa-x {
-    color: #34D1BF;
+    color: #2EC4B6;
     font-size: 1.8em;
     font-weight: 100;
 }

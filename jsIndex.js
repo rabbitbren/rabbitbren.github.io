@@ -58,13 +58,39 @@ btnCerrar.addEventListener('click', () => {
 })
 
 
-//funcion que cambia el display de las fichas de las decadas en experiencia
-const cambiarDisplayAnio = (exibir, bloquear1, bloquear2, mostrar) => {
-    exibir.style.display = mostrar;
-    bloquear1.style.display = 'none';
-    bloquear2.style.display = 'none';
+//----------> FUNCIONALIDADES A LOS BOTONES DE NAVEGACION Y CAMBIOS DE FICHA DE INFORMACION <----------
+//opciones de BOTONES  de navegacion
+const btnInicio = document.getElementById('boton-inicio');
+const btnPostulante = document.getElementById('boton-postulante');
+const btnHabilidades = document.getElementById('boton-habilidad');
+const btnExperiencia = document.getElementById('boton-experiencia');
+let btnId = '';
+
+//dandole funcionalidad a los BOTONES, para cambiar el display de las fichas
+btnInicio. addEventListener('click', () => cambiarDisplay(fichaTexto, fichaDatos, fichaHabilidad, fichaExperiencia, 'grid'));
+btnPostulante.addEventListener('click', () => cambiarDisplay(fichaDatos, fichaTexto, fichaHabilidad, fichaExperiencia, 'grid'));
+btnHabilidades.addEventListener('click', () => cambiarDisplay(fichaHabilidad, fichaTexto, fichaDatos, fichaExperiencia, 'grid'));
+btnExperiencia.addEventListener('click', () => cambiarDisplay(fichaExperiencia, fichaTexto, fichaDatos, fichaHabilidad, 'grid'));
+
+
+const mantenerColor = (id) => {
+    if(btnId != id) {
+        if(btnId != '') {
+            document.getElementById(btnId).style.color = '#011627';
+        }
+        btnId = id;
+        document.getElementById(btnId).style.color = '#FF3366';
+    }
 }
 
+mantenerColor('boton-inicio');
+btnInicio.addEventListener('click', (e) => mantenerColor(e.target.id));
+btnPostulante.addEventListener('click', (e) => mantenerColor(e.target.id));
+btnHabilidades.addEventListener('click', (e) => mantenerColor(e.target.id));
+btnExperiencia.addEventListener('click', (e) => mantenerColor(e.target.id));
+
+
+//----------> FUNCIONALIDADES A LOS BOTONES DE NAVEGACION Y CAMBIOS DE FICHAS ED EMPLEO POR AÑO <----------
 //obteniendo boton por anio de experiencia
 const btnAnioUno = document.getElementById('decada-uno');
 const btnAnioDos = document.getElementById('decada-dos');
@@ -75,70 +101,30 @@ const fichaAnioUno = document.getElementById('mostrar-experiencia_decadaUno');
 const fichaAnioDos = document.getElementById('mostrar-experiencia_decadaDos');
 const fichaAnioTres = document.getElementById('mostrar-experiencia_decadaTres');
 
+//funcion que cambia el display de las fichas de las decadas en experiencia
+const cambiarDisplayAnio = (exibir, bloquear1, bloquear2, mostrar) => {
+    exibir.style.display = mostrar;
+    bloquear1.style.display = 'none';
+    bloquear2.style.display = 'none';
+}
+
 //llamando a la funcion que cambia el display a las fichas por anio de experiencia
 fichaAnioUno.style.display = 'grid';
 btnAnioUno.addEventListener('click', () => cambiarDisplayAnio(fichaAnioUno, fichaAnioDos, fichaAnioTres, 'grid'));
 btnAnioDos.addEventListener('click', () => cambiarDisplayAnio(fichaAnioDos, fichaAnioUno, fichaAnioTres, 'grid'));
 btnAnioTres.addEventListener('click', () => cambiarDisplayAnio(fichaAnioTres, fichaAnioUno, fichaAnioDos, 'grid'));
+let btnId2 = '';
 
-
-//opciones de BOTONES  de navegacion
-const btnInicio = document.getElementById('boton-inicio');
-const btnPostulante = document.getElementById('boton-postulante');
-const btnHabilidades = document.getElementById('boton-habilidad');
-const btnExperiencia = document.getElementById('boton-experiencia');
-
-//dandole funcionalidad a los BOTONES, para cambiar el display de las fichas
-btnInicio. addEventListener('click', () => cambiarDisplay(fichaTexto, fichaDatos, fichaHabilidad, fichaExperiencia, 'grid'));
-btnPostulante.addEventListener('click', () => cambiarDisplay(fichaDatos, fichaTexto, fichaHabilidad, fichaExperiencia, 'grid'));
-btnHabilidades.addEventListener('click', () => cambiarDisplay(fichaHabilidad, fichaTexto, fichaDatos, fichaExperiencia, 'grid'));
-btnExperiencia.addEventListener('click', () => cambiarDisplay(fichaExperiencia, fichaTexto, fichaDatos, fichaHabilidad, 'grid'));
-
-
-/*const mantenerColor = (btn, color1, color2) => {
-        window.addEventListener('click', (e) => {
-            if(btn.contains(e.target)) {
-                btn.style.color = color1;
-            } else {
-                if(!btn.contains(e.target)) {
-                    btn.style.color = color2;
-                }
-            }
-        })
-}*/
-const mantenerColor = (btn, color1, color2) => {
-    window.addEventListener('click', (e) => {
-        console.log(e);
-        if(btn.contains(e.target)) {
-            btn.style.color = color1;
-        } else {
-            if(!btn.contains(e.target)){
-                btn.style.color = color2;
-            }
+const colorFondo = (id) => {
+    if(btnId2 != id) {
+        if(btnId2 != '') {
+            document.getElementById(btnId2).style.background = '#011627';
         }
-    })
+        btnId2 = id;
+        document.getElementById(btnId2).style.background = '#2EC4B6';
+    }
 }
-
-btnInicio.addEventListener('click', () => mantenerColor(btnInicio, '#FF3366', '#011627'));
-btnPostulante.addEventListener('click', () => mantenerColor(btnPostulante, '#FF3366', '#011627'));
-btnHabilidades.addEventListener('click', () => mantenerColor(btnHabilidades, '#FF3366', '#011627'));
-btnExperiencia.addEventListener('click', () => mantenerColor(btnExperiencia, '#FF3366', '#011627'));
-
-
-const colorFondo = (btn, color1, color2) => {
-    window.addEventListener('click', (e) => {
-        if(btn.contains(e.target)) {
-            btn.style.background = color1;
-            btn.style.color = '#011627';
-        } else {
-            if(!btn.contains(e.target)) {
-                btn.style.background = color2;
-                btn.style.color = '#F6F7F8';
-            }
-        }
-    })
-}
-
-btnAnioUno.addEventListener('click', () => colorFondo(btnAnioUno, '#F6F7F8', '#011627'));
-btnAnioDos.addEventListener('click', () => colorFondo(btnAnioDos, '#F6F7F8', '#011627'));
-btnAnioTres.addEventListener('click', () => colorFondo(btnAnioTres, '#F6F7F8', '#011627'));
+colorFondo('decada-uno');
+btnAnioUno.addEventListener('click', (e) => colorFondo(e.target.id));
+btnAnioDos.addEventListener('click', (e) => colorFondo(e.target.id));
+btnAnioTres.addEventListener('click', (e) => colorFondo(e.target.id));
