@@ -5,7 +5,6 @@
 }
 
 body {
-    /* background: linear-gradient(#000000 50%, #39304A); */
     background: linear-gradient(#000000 50%, #011627);
     width: 100%;
     height: 100vh;
@@ -17,18 +16,12 @@ body {
 
 /*------> CONTENEDDR DE TODOS LOS COMPONENETES DEL CURRICUL VITAE <-------*/
 #contenedor-principal {
-    /* background: darkkhaki; */
     width: 80%;
     min-height: 95vh;
     display: grid;
     grid-template-rows: 40% 5% 55%;
 }
-@media screen and (min-width: 1200px) {
-    #contenedor-principal {
-        grid-template-columns: 40% 5% 60%;
-        grid-template-rows: 100%;
-    }
-}
+
 
 /*------> CABECERA DEL CURRICULUM VITAE <-------*/
 #contenedor-cabecera {
@@ -43,7 +36,6 @@ body {
 
 /*DIV contenedor del nombre y redes de contacto*/
 .cabecera-cv_contacto {
-    /* background: darkblue; */
     width: 50%;
     height: 35%;
     display: flex;
@@ -54,7 +46,6 @@ body {
 
 /*estilos aplicados al nombre puesto en la cabecera*/
 .cv-contacto_nombre {
-    /* background: darkgreen; */
     width: 100%;
     height: 50%;
     color: #F6F7F8;
@@ -68,7 +59,6 @@ body {
 
 /*estilos aplicados a las a las redes dispuestos bajo el nombre de la cabecera*/
 .cabecera-cv_contacto ul {
-    /* background: darkgoldenrod; */
     width: 30%;
     height: 40%;
     display: flex;
@@ -77,7 +67,6 @@ body {
 }
 
 .cv-contacto_red {
-    /* background: darkkhaki; */
     width: 30%;
     height: 100%;
     display: flex;
@@ -99,14 +88,7 @@ body {
     color: #2EC4B6;
     animation: rotar 1 1s linear;
 }
-@keyframes rotar {
-    30%{
-        transform: rotateY(90deg);
-    }
-    50%{
-        transform: rotateY(180deg);
-    }
-}
+
 
 /*------> CONTENEDDR DE LA BARRA NAVEGADORA DEL CURRICULUM VITAE <-------*/
 #contenedor-navegador {
@@ -128,11 +110,10 @@ body {
     background: #f6f7f8ed;
     width: 100%;
     height: 100%;
-    display: none; /*cambiar a flex cuando aumente el layout*/
+    display: none;
     align-self: center;
 }
 .navegador-cv_botones ul {
-    /* background: #F8F4E3; */
     width: 100%;
     height: 80%;
     display: flex;
@@ -142,17 +123,14 @@ body {
     align-items: center;
     list-style: none;
 }
-@media screen and (min-width: 1200px) {
-    .navegador-cv_botones ul {
-        height: 40%;
-    }
-}
+
 .navegador-cv_botones ul button {
     background: none;
     border: none;
     color: #011627;
     font-size: 1em;
 }
+
 .navegador-cv_botones ul button:hover {
     cursor: pointer;
     animation: sacudir 3 200ms linear;
@@ -160,14 +138,7 @@ body {
 .navegador-cv_botones ul button i {
     pointer-events: none;
 }
-@keyframes sacudir {
-    0% {
-        transform: translateX(-2px);
-    }
-    50% {
-        transform: translateX(2px);
-    }
-}
+
 /*estilos aplicados al boton que despliega el menu que permite navegar el CV*/
 .navegador-cv_bars button {
     background: none;
@@ -267,7 +238,7 @@ body {
 
 /*-------> PRIMERA FICHA QUE CONTIENE UN RESUMEN ACERCAS DE LOS ASPECTOS GENERALES DEL POSTULANTE <-------*/
 #informar-texto {
-    display: grid; /*cambiar a grid despues*/
+    display: grid;
     grid-template-rows: 20% 80%;
 }
 #informar-texto p {
@@ -280,7 +251,7 @@ body {
 /*-------> SEGUNDA FICHA QUE CONTIENE LOS DATOS PERSONALES DEL POSTULANTE <-------*/
 /*estilos generales aplicados a la ficha que contiene los datos personales del postulante*/
 #informar-datos {
-    display: none; /*cambiar a GRID*/
+    display: none;
     grid-template-rows: 10% 80% 10%;
     grid-template-columns: 100%;
 }
@@ -349,7 +320,7 @@ body {
     width: 100%;
     height: 100%;
 
-    display: none; /*cambiar a grid*/
+    display: none;
     grid-template-rows: 10% 90%;
     grid-template-columns: 100%;
 }
@@ -451,7 +422,7 @@ body {
 
 /*-------> TERCERA FICHA DE INFORMACION DE HABILIDADES DEL POSTULANTE <-------*/
 #informar-habilidades {
-    display: none; /*cambiar a grid despues*/
+    display: none;
     grid-template-rows: 15% 85%;
     grid-template-columns: 100%;
 }
@@ -525,7 +496,7 @@ body {
 
 /*-------> CUARTA FICHA QUE CONTIENE LOS DATOS DE EXPERIENCIA LABORAL DEL POSTULANTE <-------*/
 #informar-experiencia {
-    display: none; /*cambiar a Grid*/
+    display: none;
     grid-template-rows: 15% 85%;
     grid-template-columns: 100%;
 }
@@ -563,7 +534,7 @@ body {
 #mostrar-experiencia_decadaUno, #mostrar-experiencia_decadaDos, #mostrar-experiencia_decadaTres {
     width: 100%;
     height: 100%;
-    display: none; /*cambiar a Grid*/
+    display: none;
     grid-template-rows: 44% 44%;
     grid-template-columns: 95%;
     align-content: space-evenly;
@@ -662,6 +633,24 @@ body {
     }
 }
 
+@keyframes rotar {
+    30%{
+        transform: rotateY(90deg);
+    }
+    50%{
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes sacudir {
+    0% {
+        transform: translateX(-2px);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+}
+
 
 /* --------> BREAKPOINTS >=992/ >=1200px <-------- */
 
@@ -674,9 +663,20 @@ body {
         grid-template-rows: 100%;
     }
 }
+@media screen and (min-width: 1200px) {
+    #contenedor-principal {
+        grid-template-columns: 40% 5% 60%;
+        grid-template-rows: 100%;
+    }
+}
 
+@media screen and (min-width: 1200px) {
+    .navegador-cv_botones ul {
+        height: 40%;
+    }
+}
 
-/*contenedor izquierdo, PORTADAD*/
+/*contenedor izquierdo, PORTADA*/
 @media screen and (min-width: 992px) {
     #contenedor-cabecera {
         background: url(./img/medium_rostro.jpg) no-repeat;
@@ -710,14 +710,31 @@ body {
 }
 @media screen and (min-width: 1200px) {
     .cv-contacto_nombre {
-        font-size: 1.8em;
+        font-size: 2.2em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .cabecera-cv_contacto {
+        height: 12%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .cabecera-cv_contacto {
+        height: 15%;
     }
 }
 
 @media screen and (min-width: 992px) {
     .cabecera-cv_contacto ul {
-        width: 45%;
-        height: 25%;
+        width: 38%;
+        height: 22%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .cabecera-cv_contacto ul {
+        width: 30%;
+        height: 22%;
     }
 }
 
@@ -746,6 +763,17 @@ body {
     }
 }
 
+@media screen and (min-width: 992px) {
+    .navegador-cv_botones ul button  {
+        font-size: 1.15em;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .navegador-cv_botones ul button  {
+        font-size: 1.2em;
+    }
+}
+
 /*contenedor general de informacion y fichas*/
 @media screen and (min-width: 992px) {
     #contenedor-informacion  {
@@ -769,14 +797,27 @@ body {
         height: 90%;
     }
 }
+
 @media screen and (min-width: 992px){
     .contenedor-general_titulo {
         font-size: 1.8em;
     }
 }
+@media screen and (min-width: 1200px){
+    .contenedor-general_titulo {
+        font-size: 2.3em;
+    }
+}
+
 @media screen and (min-width: 992px){
     .contenedor-general_titulo .fa-solid {
         font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #informar-texto p {
+       font-size: 1.2em;
     }
 }
 
@@ -786,14 +827,32 @@ body {
        grid-template-rows: 15% 75% 10%;
     }
 }
-@media screen and (min-width: 992px){
-    #informar-datos {
-       grid-template-rows: 15% 75% 10%;
+
+@media screen and (min-width: 992px) {
+    .informacion-personal h4 {
+        font-size: 1.15em;
     }
 }
+@media screen and (min-width: 1200px) {
+    .informacion-personal h4 {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .informacion-personal h4 .fa-solid  {
+        font-size: 1.1em;
+    }
+}
+
 @media screen and (min-width: 992px){
     .informacion-personal p {
-       font-size: 0.9em;
+       font-size: 1em;
+    }
+}
+@media screen and (min-width: 1200px){
+    .informacion-personal p {
+       font-size: 1.3em;
     }
 }
 /*Formulario*/
@@ -827,26 +886,55 @@ body {
         padding: 0.8em;
     }
 }
+
 @media  screen and (min-width: 992px) {
     .contenedor-habilidades_item p {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
+@media  screen and (min-width: 1200px) {
+    .contenedor-habilidades_item p {
+        font-size: 1.1em;
+    }
+}
+
 @media  screen and (min-width: 992px) {
     .habilidades-item_barra {
-        height: 30%;
+        height: 50%;
         align-self: flex-end;
      }
 }
 
 /*ficha Experiencia*/
 @media screen and (min-width: 992px) {
+    .mostrar-empleo_anio {
+        height: 70%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .mostrar-empleo_anio {
+        height: 80%;
+    }
+}
+
+@media screen and (min-width: 992px) {
     .mostrar-empleo_lugarPuestoDescripcion h5 {
         font-size: 1em;
     }
 }
+@media screen and (min-width: 1200px) {
+    .mostrar-empleo_lugarPuestoDescripcion h5 {
+        font-size: 1.2em;
+    }
+}
+
 @media screen and (min-width: 992px) {
     .mostrar-empleo_lugarPuestoDescripcion p {
         font-size: 0.9em;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .mostrar-empleo_lugarPuestoDescripcion p {
+        font-size: 1em;
     }
 }
